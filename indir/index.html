@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harfle — Türkçe Kelime Bulmaca</title>
+<meta name="description" content="Harfle, Türkçe kelime bulmaca oyunu. Google Play'den ücretsiz indir ya da tarayıcıda oyna.">
+<link rel="icon" href="harfle.png">
+
+<!-- Paylaşıldığında görünen kart -->
+<meta property="og:title" content="Harfle — Türkçe Kelime Bulmaca">
+<meta property="og:description" content="Her gün yeni bir kelime. Ücretsiz indir.">
+<meta property="og:image" content="https://burak-boran.github.io/indir/harfle.png">
+<meta property="og:type" content="website">
+
+<style>
+  :root {
+    --turkuaz: #14b8a6;
+    --mor: #7c3aed;
+    --yazi: #ffffff;
+    --soluk: rgba(255, 255, 255, 0.78);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    padding: 48px 20px calc(40px + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    text-align: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--yazi);
+    background: linear-gradient(170deg, var(--turkuaz) 0%, #2563eb 48%, var(--mor) 100%);
+  }
+
+  .ikon {
+    width: 112px;
+    height: 112px;
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  h1 { margin: 0; font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; }
+
+  p { margin: 0; max-width: 24rem; font-size: 1.05rem; line-height: 1.55; color: var(--soluk); }
+
+  /* Karolar: oyunun kendi görsel dili, tek bakışta "bu bir kelime oyunu" diyor. */
+  .karolar { display: flex; gap: 8px; }
+
+  .karo {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .karo.dogru { background: #4ade80; color: #0f172a; }
+  .karo.yer { background: #fcd34d; color: #0f172a; }
+
+  .indir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 22rem;
+    margin-top: 6px;
+    padding: 18px 24px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  }
+
+  .indir:active { transform: translateY(1px); }
+
+  .web {
+    color: var(--yazi);
+    font-size: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    opacity: 0.9;
+  }
+
+  footer { margin-top: 10px; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); }
+</style>
+</head>
+<body>
+  <img class="ikon" src="harfle.png" alt="Harfle">
+
+  <h1>Harfle</h1>
+
+  <div class="karolar" aria-hidden="true">
+    <span class="karo dogru">H</span>
+    <span class="karo">A</span>
+    <span class="karo yer">R</span>
+    <span class="karo">F</span>
+    <span class="karo dogru">E</span>
+  </div>
+
+  <p>Türkçe kelime bulmacası. Her gün yeni bir kelime, 100 seviyelik tırmanış ve sınırsız mod. Ücretsiz.</p>
+
+  <!-- Mağaza bağlantısı bu sayfadan veriliyor: Instagram ve benzeri
+       uygulamaların gömülü tarayıcısı play.google.com adresini doğrudan
+       açamıyor, sayfa içinden yapılan tıklamada ise Play açılıyor. -->
+  <a class="indir" href="https://play.google.com/store/apps/details?id=com.brngames.harfle">
+    <svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true">
+      <path fill="#00D0FF" d="M1.5 1.2 13.4 13 1.5 24.8A2.4 2.4 0 0 1 .7 23V3a2.4 2.4 0 0 1 .8-1.8z"/>
+      <path fill="#00F076" d="M1.5 1.2a2 2 0 0 1 2-.1L17.6 9l-4.2 4z"/>
+      <path fill="#FF3A44" d="M13.4 13l4.2 4-14.1 7.9a2 2 0 0 1-2-.1z"/>
+      <path fill="#FFC400" d="M17.6 9l4.3 2.4c1.4.8 1.4 2.4 0 3.2L17.6 17l-4.2-4z"/>
+    </svg>
+    Google Play'den indir
+  </a>
+
+  <a class="web" href="https://burak-boran.github.io/harfle">Tarayıcıda oyna</a>
+
+  <footer>brn games</footer>
+</body>
+</html>
